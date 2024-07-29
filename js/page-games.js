@@ -39,7 +39,7 @@ let PLAYER_IN_OTHER_GAME_JS;
       window.addEventListener("hashchange", waitForServerListOptions);
 
     function waitForServerListOptions() {
-      // if (window.location.hash.endsWith("game-instances")) {
+      //if (window.location.hash.endsWith("game-instances")) {
       const observer = new MutationObserver((mutationsList, observer) => {
         const element = document.querySelector(".server-list-options");
         if (element?.children?.length === 2) {
@@ -50,8 +50,8 @@ let PLAYER_IN_OTHER_GAME_JS;
 
       observer.observe(document.body, { childList: true, subtree: true });
       return true;
-      //  }
-      // return false;
+      //}
+      //return false;
     }
 
     function appendLayout() {
